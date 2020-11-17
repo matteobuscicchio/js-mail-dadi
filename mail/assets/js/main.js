@@ -23,6 +23,7 @@ for (var i = 0; i < emaliCheckListArray.length; i++) {
 
 };
 
+console.log(booleanEmailCheck);
 
 if (booleanEmailCheck > 0) {
 
