@@ -4,22 +4,31 @@
 var userMail = prompt("Salve, qual è la tua Email?");
 console.log(userMail);
 
+// emailCheckListArray
+var emaliCheckListArray = ["esercizio@boolean.it", "esercizio@boolean.com", "esercizio@boolean.net"];
+
+var booleanEmailCheck = 0;
+
 // emailCheckList
-var emaliCheckList = ["esercizio@boolean.it", "esercizio@boolean.com", "esercizio@boolean.net"]
 
-// verificatore di accesso
-if (userMail == emaliCheckList[0]) {
+for (var i = 0; i < emaliCheckListArray.length; i++) {
 
-  document.getElementById('mail_checker').innerHTML = "access guarantee";
+  console.log(emaliCheckListArray[i]);
 
-} else if (userMail == emaliCheckList[1]) {
+  if (userMail == emaliCheckListArray[i]) {
 
-  document.getElementById('mail_checker').innerHTML = "access guarantee";
+    booleanEmailCheck++;
 
-} else if (userMail == emaliCheckList[2]) {
+  }
+
+};
+
+
+if (booleanEmailCheck > 0) {
 
   document.getElementById('mail_checker').innerHTML = "access guarantee";
 
 } else {
-  document.getElementById('mail_checker').innerHTML = "access denied. Per poter accedere devi avere una mail @boolean.";
-}
+
+  document.getElementById('mail_checker').innerHTML = "access denied. Per poter accedere devi avere una mail @boolean.it/.com/.net.";
+};
